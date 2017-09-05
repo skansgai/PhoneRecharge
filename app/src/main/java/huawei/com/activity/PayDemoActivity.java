@@ -26,16 +26,15 @@ import huawei.com.util.OrderInfoUtil2_0;
 public class PayDemoActivity extends FragmentActivity {
 
 	/** 支付宝支付业务：入参app_id */
-	public static final String APPID = "2016081600257197";
+	public static final String APPID = "2016082000297293";
 
 	/** 支付宝账户登录授权业务：入参pid值 */
-	public static final String PID = "2088102171399720";
+	public static final String PID = "2088102172268733";
 	/** 支付宝账户登录授权业务：入参target_id值 */
-	public static final String TARGET_ID = "urcvnx2393@sandbox.com";
+	public static final String TARGET_ID = "123456789";
 
-	/** 工具地址：https://doc.open.alipay.com/docs/doc.htm?treeId=291&articleId=106097&docType=1 */
-	public static final String RSA2_PRIVATE = "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCrCsCbEfPkY/r2WpTYe9syxx7OKLOCWxCJCfy2Jtf5DgRO56VKrsamrcX1uCLHQ6yFUJ/5d+bS5XugjBCh35sGHL2RdCICHvGl0l4aU0gbCAXMd1YaKpi4ASUz2Y+sA2QtdwIQiKeJ+l5eZM6SzroCIa3COhA16VzQ9DV3tA5f5UVKUwJ1dgy5mbiQsYxPsqnOxdsu03uzN5K31AMDS4sPKrR7rfHpE7Yf3PeeCeroz6KJVwe0+fWNWTcQLCQPP9BwBDHo9zIeUeauwH3NTeQt8aopH6M0bMdGj1CeHu/V5gzm6mx6VijyaQVoByD3dBwanZHFbBElB7Ac69ZCEIw5AgMBAAECggEBAJ24p40XS/ByZYxgUNsjsyiqxvRSQd3VvXSw2fDZ9tP5oe1k3F32tsYifeYtKxzWgbLZevsfHqGg7ZRJNFkgiaJkREZpcabFBA3l49Kgs2AB0N8PuD0exH8Ax159o2d6JRlroWK/sMaiMf0XNgnYSVwH1GPDCQm9rFIer2M3jP3NOmEZXPGmfLscecuGRUyAvVK6o1dd2L+bkb1O3CH4E5xMDlnlwtFZ+vH/eCTryvy+KhHwy+HDddDzSY/YKnvxdJT3xotdpSHVtc0Shh8mwv/FhLlTkbEmwbeYHrldS7kPiXso22N6d9S2axZP1CL3t7oB7d/zOmlHdstW0dIrqmUCgYEA0gSr64Ju8y80hTE20nI3W4Hl62h67uNfrgb1h4QwjDEbz37HLBgVvZ8Lv4p++DR+f2UIEPD2cS/QkUNk+WxVoH9VUfIdcHtcBDPJGYwvhLbG9Rf5UoeVYi1xKrQ03rT/LiipX2ZfSluYxTSqjcn58G01FY1K7L3jBcTcFAoZPQMCgYEA0H1/jLvid/gYvDyrzmLB714NYql0dhD9KTkVGuFeiaUDGB4mbO4Nc8/Sq+KkO9RvM56rLQ/EMppM1gb92D1XiR7z1QSAs/xfWAZCszqyfMS/rQ2OZEbZ6nuafBHTpRbxEX0Y5z1ghDPodf73OF11yZzn4LrIbr1xBmQV0eEnVxMCgYAiGZIUhjQfli2P5sLA/ryQRhIf2/IB8bcqWYTqQQNk7+BVG3+ZYDu/cyCENCeTg2p6otvhbE6HaD0UKP4vJXDtw18GFCrFhbIWGJZxaHqasNazGvZneQ4/R6OVTHc9JeQ9CWsey09zklXGx1td9Ep5yDGTU0K0F8zRtfoJ4u3gIwKBgQC/K+QR6pHNSYt8xvEOjJWhZA9IAXONcyR/cRz+CdrCwbDlo3e+eEWThON6wpWvWqogngP9jLBtafi8Y6rNZennDJ+uGrPc1bOjJhJw/4h8SXgsOPrwzdqxXGcaDsqPXUrsq1Vza18due8Uixaq81+2343rDboNeN2za4Bqc1a8SwKBgBQuSyF65y8oNnFN/QJ5JEO5nYVQzMwRZpaQJx775RhkPOr58O5qXvDdwxN9XXiAqCjL79qlcmfJgTdxTUOB2HkhjkbXj69M1/X0+9TECBCOw5cupYfl/42VMHVnz6GwgbDmHsqUJQ7rhcMzw1Xsi/OuC/fYSERw2l4qSk7NKo61";
-	public static final String RSA_PRIVATE = "";
+	public static final String RSA2_PRIVATE = AlipayConfig.RSA_PRIVATE;
+	public static final String RSA_PRIVATE = AlipayConfig.RSA_PRIVATE;
 
 	private static final int SDK_PAY_FLAG = 1;
 	private static final int SDK_AUTH_FLAG = 2;
@@ -84,7 +83,6 @@ public class PayDemoActivity extends FragmentActivity {
 		EnvUtils.setEnv(EnvUtils.EnvEnum.SANDBOX);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.pay_main);
-		EnvUtils.setEnv(EnvUtils.EnvEnum.SANDBOX);
 	}
 	
 	/**
